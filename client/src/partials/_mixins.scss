@@ -1,0 +1,42 @@
+@import './typography';
+
+// Typography
+@mixin text {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+}
+
+@mixin header-1 {
+    font-size: 1.5rem;  
+    line-height: 2rem;
+    font-family: roboto-bold;
+}
+
+@mixin header-2 {
+    font-size: 1.25rem;
+    line-height: 1.375rem;
+    font-family: roboto-reg;
+}
+
+@mixin header-3 {
+    font-size: 0.875rem;
+    line-height: 1.375rem;
+    font-family: roboto-medium;
+}
+
+@mixin header-4 {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+    font-family: roboto-medium;
+}
+
+@mixin header-4-list {
+    font-size: 0.8125rem;
+    line-height: 1.125rem;
+}
+
+@mixin header-5 {
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    font-family: roboto-medium;
+}

@@ -1,0 +1,21 @@
+@import '../../partials/global';
+@import '../../partials/mixins';
+@import '../../partials/typography';
+@import '../../partials/variables';
+
+.header {
+    &-logo {
+        color: $white;
+        margin: 0;
+    }
+
+    &-container {
+        background-color: $primary-col;
+        display: flex;
+        justify-content: center;
+        position: fixed;
+        top: 0;
+        padding: 0.5rem;
+        width: 100%;
+    }
+}

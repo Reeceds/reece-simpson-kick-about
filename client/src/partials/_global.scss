@@ -1,0 +1,23 @@
+@import './mixins';
+@import './typography';
+@import './variables';
+
+* {
+	margin: 0;
+	padding: 0;
+    border: 0;
+    font-family: roboto-reg;
+    font-weight: 100;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style-type: none;
+    color: $primary-font-col;
+}
+
+body{
+    background: $primary-col;
+}
+
+.site-container {
+    padding: 4.5rem 1rem 3rem 1rem;
+}
