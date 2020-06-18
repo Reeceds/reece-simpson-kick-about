@@ -36,6 +36,7 @@ class Location extends React.Component {
                         <p className="location-description">{this.state.location.description}</p>
                         <p className="location-distance">Distance: {this.state.location.distance} km</p>
                     </div>
+                    <div className="location-team-card-container">
 
                     {this.state.teams.map(team => {
                         console.log(team)
@@ -45,7 +46,7 @@ class Location extends React.Component {
                         console.log(team)
                         return (<Link key={team.id} to={`/teams/${team.id}`}><TeamListCard team={team}/></Link>)
                     }) : null} */}
-                    
+                    </div>
                 </div>
             </div>
          );

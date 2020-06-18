@@ -1,12 +1,5 @@
 const { v4: uuidv4 } = require('uuid');
 
-// import image1 from '../../client/src/assets/images/cherry-beach.jpg';
-// import image2 from '../../client/src/assets/images/flemingdom-park.jpg';
-// import image3 from '../../client/src/assets/images/academy-soccer.jpg';
-// import image4 from '../../client/src/assets/images/ashtonbee-park.jpg';
-// import image5 from '../../client/src/assets/images/ashtonbee-park.jpg';
-// import image6 from '../../client/src/assets/images/canoe-park.jpg';
-
 const locationsList = 
 [
     {

@@ -8,6 +8,7 @@ import Location from './pages/Location/Location'
 import Team from './pages/Team/Team'
 
 import './partials/_global.scss'
+import TeamList from './pages/TeamList/TeamList';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
 
         <Switch>
           <Route path="/locations" exact component={LocationList} />;
+          <Route path="/teams" exact component={TeamList} />;
           <Route path="/locations/:id" component={Location} />;
           <Route path="/teams/:id" component={Team} />;
         </Switch>
