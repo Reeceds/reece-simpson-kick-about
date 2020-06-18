@@ -1,0 +1,44 @@
+@import '../../partials/mixins';
+@import '../../partials/variables';
+
+.team-list-card {
+    &-container {
+        display: flex;
+        padding: 0 1rem;
+        margin-bottom: 1rem;
+    }
+
+    &-color {
+        background-color: $primary-col;
+        width: 0.5rem;
+    }
+
+    &-details-container {
+        padding: 1rem;
+        background-color: $secondary-col;
+        width: 100%;
+    }
+
+    &-team-list-name {
+        @include header-2;
+    }
+
+    &-username {
+        @include header-3;
+        margin-bottom: 0.75rem;
+    }
+
+    &-players-needed {
+        @include text;
+        width: 50%;
+    }
+
+    &-time {
+        @include text;
+        width: 50%;
+    }
+
+    &-players-time-container {
+        display: flex;
+    }
+}

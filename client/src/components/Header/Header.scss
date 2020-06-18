@@ -5,12 +5,11 @@
 
 .header {
     &-logo {
-        color: $white;
         margin: 0;
     }
 
     &-container {
-        background-color: $primary-col;
+        background-color: $alternate-col;
         display: flex;
         justify-content: center;
         position: fixed;

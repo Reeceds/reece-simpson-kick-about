@@ -1,17 +1,17 @@
 @import '../../partials/mixins';
 @import '../../partials/variables';
 
+
+
 .location {
 
-    &-container {
-        margin-bottom: 1.5rem;
-        border-radius: 0.75rem;
-        overflow: hidden;
+    &-page-container {
+        padding-bottom: 1rem;
     }
 
     &-image-container {
         width: 100%;
-        height: 7rem;
+        height: 11rem;
         overflow: hidden;
     }
 
@@ -20,20 +20,23 @@
     }
 
     &-details-container {
-        background-color: $secondary-col;
-        padding: 1rem;
+        padding: 1.5rem 1rem;
+        margin-bottom: 1rem;
     }
 
     &-name {
         @include header-2;
         margin-bottom: 1rem;
-        color: $grey;
+    }
+
+    &-description {
+        @include text;
+        margin-bottom: 0.75rem;
     }
 
     &-distance {
-        @include text;
+        @include header-3;
         width: 50%;
-        color: $grey;
         margin-bottom: 0;
 
     }
@@ -41,7 +44,6 @@
     &-teams-number {
         @include text;
         width: 50%;
-        color: $grey;
         margin-bottom: 0;
     }
 
@@ -49,3 +51,5 @@
         display: flex;
     }
 }
+
+

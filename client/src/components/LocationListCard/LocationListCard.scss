@@ -1,0 +1,45 @@
+@import '../../partials/mixins';
+@import '../../partials/variables';
+
+.location-card {
+
+    &-container {
+        margin-bottom: 1.5rem;
+        // border-radius: 0.75rem;
+        overflow: hidden;
+    }
+
+    &-image-container {
+        width: 100%;
+        height: 7rem;
+        overflow: hidden;
+    }
+
+    &-image {
+        width: 100%;
+    }
+
+    &-details-container {
+        background-color: $secondary-col;
+        padding: 1rem;
+    }
+
+    &-name {
+        @include header-2;
+        margin-bottom: 1rem;
+    }
+
+    &-distance {
+        @include text;
+        width: 50%;
+    }
+
+    &-teams-number {
+        @include text;
+        width: 50%;
+    }
+
+    &--flex-row {
+        display: flex;
+    }
+}
