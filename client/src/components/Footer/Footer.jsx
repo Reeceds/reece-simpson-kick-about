@@ -1,11 +1,10 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-
 import '../Footer/Footer.scss';
-import messagesIcon from '../../assets/icons/message-icon.svg';
-import locatoinIcon from '../../assets/icons/location-icon.svg';
-import userIcon from '../../assets/icons/avatar-icon.svg';
-import teams from '../../assets/icons/teams-icon.svg';
+import messagesIcon from '../../assets/icons/nav/nav-message-icon.svg'
+import locatoinIcon from '../../assets/icons/nav/nav-location-icon.svg'
+import userIcon from '../../assets/icons/nav/nav-avatar-icon.svg'
+import teams from '../../assets/icons/nav/nav-teams-icon.svg'
 
 
 const Footer = () => {

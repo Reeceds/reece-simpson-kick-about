@@ -4,11 +4,11 @@
 .location-card {
 
     &-container {
-        margin-bottom: 1.5rem;
+        margin-bottom: 1.75rem;
         // border-radius: 0.75rem;
-        // box-shadow: 1px 1px 5px 0px #0000009e;
+        box-shadow: 1px 1px 5px 0px #3333339e;
         overflow: hidden;
-        border-radius: 10px;
+        border-radius: 5px;
     }
 
     &-image-container {
@@ -19,6 +19,7 @@
 
     &-image {
         width: 100%;
+        object-position: 0 -50px;
     }
 
     &-details-container {
@@ -43,5 +44,6 @@
 
     &--flex-row {
         display: flex;
+        margin-bottom: 0.5rem;
     }
 }

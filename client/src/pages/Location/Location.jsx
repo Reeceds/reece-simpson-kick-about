@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
-import TeamListCard from '../../components/TeamListCard/TeamListCard';
+import TeamCard from '../../components/TeamCard/TeamCard';
 import '../Location/Location.scss'
 
 const URL = "http://localhost:8080/locations";
@@ -39,12 +39,11 @@ class Location extends React.Component {
                     <div className="location-team-card-container">
 
                     {this.state.teams.map(team => {
-                        console.log(team)
-                        return (<Link key={team.id} to={`/teams/${team.id}`}><TeamListCard team={team}/></Link>)})}
+                        return (<Link key={team.id} to={`/teams/${team.id}`}><TeamCard team={team}/></Link>)})}
 
                     {/* {teams ? this.state.teams.map(team => {
                         console.log(team)
-                        return (<Link key={team.id} to={`/teams/${team.id}`}><TeamListCard team={team}/></Link>)
+                        return (<Link key={team.id} to={`/teams/${team.id}`}><TeamCard team={team}/></Link>)
                     }) : null} */}
                     </div>
                 </div>

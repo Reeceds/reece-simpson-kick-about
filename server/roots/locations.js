@@ -4,7 +4,7 @@ const locationsList = require('../data/locations');
 const teamsList = require('../data/teams');
 
 router.get("/", (req, res) => {
-    const location = locationsList.map(place => {
+    const locations = locationsList.map(place => {
         const team = teamsList.filter(club => club.locNum === place.locNum);
         ///////// returns each location with the related teams //////////
         // place["team"] = team;
@@ -14,7 +14,7 @@ router.get("/", (req, res) => {
         return place
         
     });
-    res.status(200).send(location)
+    res.status(200).send(locations)
 })
 
 router.get("/:id", (req, res) => {

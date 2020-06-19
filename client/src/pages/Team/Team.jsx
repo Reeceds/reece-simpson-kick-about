@@ -1,16 +1,20 @@
 import React from 'react';
 import axios from 'axios';
+import { Link } from 'react-router-dom';
 import '../Team/Team.scss';
 import userIcon from '../../assets/icons/user-icon.svg';
 import clockIcon from '../../assets/icons/time-icon.svg';
 import footballIcon from '../../assets/icons/football-icon.svg';
+import locationIcon from '../../assets/icons/location-icon.svg';
 
 const URL = "http://localhost:8080/teams"
 
 class Team extends React.Component {
 
     state = {
-        team: []
+        team: [],
+        venue: [],
+        location: []
     }
 
     componentDidMount(){
@@ -18,7 +22,9 @@ class Team extends React.Component {
         .then(res => {
             console.log(res.data)
             this.setState({
-                team: res.data
+                team: res.data.team,
+                venue: res.data.location[0].venue,
+                location: res.data.location[0].id
             })
         })
     }
@@ -36,6 +42,15 @@ class Team extends React.Component {
                         </div>
                     </div>
                     <div className="team-details-time-players-container">
+                        <Link to={`/locations/${this.state.location}`}>
+                            <div className="team-details-icon-container">
+                                <div className="team-details-icon--center">
+                                    <img alt="location icon" src={locationIcon}/>
+                                </div>
+                                <h4 className="team-details-location">{this.state.venue}</h4>
+                            </div>
+                        </ Link>
+
                         <div className="team-details-icon-container">
                             <img className="team-details-icon" alt="Clock icon" src={clockIcon}/>
                             <h4 className="team-details-time">{this.state.team.time}</h4>

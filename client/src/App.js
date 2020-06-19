@@ -9,15 +9,16 @@ import Team from './pages/Team/Team'
 
 import './partials/_global.scss'
 import TeamList from './pages/TeamList/TeamList';
+import SignUp from './pages/SignUp/SignUp';
 
 function App() {
   return (
     <div className="App">
-      
       <BrowserRouter>
       <Header />
 
         <Switch>
+          <Route path="/signup" exact component={SignUp} />;
           <Route path="/locations" exact component={LocationList} />;
           <Route path="/teams" exact component={TeamList} />;
           <Route path="/locations/:id" component={Location} />;
