@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import TeamCard from '../../components/TeamCard/TeamCard';
-import '../Location/Location.scss'
+import './Location.scss'
 
 const URL = "http://localhost:8080/locations";
 

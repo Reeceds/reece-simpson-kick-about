@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 import TeamListCard from '../../components/TeamListCard/TeamListCard';
-import '../TeamList/TeamList.scss';
+import './TeamList.scss';
 
 const URL = "http://localhost:8080/teams";
 

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import '../Footer/Footer.scss';
+import './Footer.scss';
 import messagesIcon from '../../assets/icons/nav/nav-message-icon.svg'
 import locatoinIcon from '../../assets/icons/nav/nav-location-icon.svg'
 import userIcon from '../../assets/icons/nav/nav-avatar-icon.svg'

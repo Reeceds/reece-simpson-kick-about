@@ -1,5 +1,5 @@
 import React from 'react';
-import '../LocationListCard/LocationListCard.scss'
+import './LocationListCard.scss'
 
 const LocationCard = (props) => {
     return ( 

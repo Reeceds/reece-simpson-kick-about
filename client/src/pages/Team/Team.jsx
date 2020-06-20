@@ -1,7 +1,7 @@
 import React from 'react';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
-import '../Team/Team.scss';
+import './Team.scss';
 import userIcon from '../../assets/icons/user-icon.svg';
 import clockIcon from '../../assets/icons/time-icon.svg';
 import footballIcon from '../../assets/icons/football-icon.svg';
@@ -60,7 +60,7 @@ class Team extends React.Component {
                             <h4 className="team-details-players-needed">Players needed: {this.state.team.playersNeeded}</h4>
                         </div>
                         <form action="#">
-                            <button className="btn" type="submit"><h3 className="btn-text">Request Join</h3></button>
+                            <button className="btn" type="submit">Request Join</button>
                         </form>
                     </div>
                 </div>

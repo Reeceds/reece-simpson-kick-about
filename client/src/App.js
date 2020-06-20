@@ -6,10 +6,10 @@ import Footer from './components/Footer/Footer'
 import LocationList from './pages/LocationList/LocationList'
 import Location from './pages/Location/Location'
 import Team from './pages/Team/Team'
-
-import './partials/_global.scss'
 import TeamList from './pages/TeamList/TeamList';
-import SignUp from './pages/SignUp/SignUp';
+import Signup from './pages/Signup/Signup';
+import './partials/_global.scss'
+
 
 function App() {
   return (
@@ -18,7 +18,7 @@ function App() {
       <Header />
 
         <Switch>
-          <Route path="/signup" exact component={SignUp} />;
+          <Route path="/signup" exact component={Signup} />;
           <Route path="/locations" exact component={LocationList} />;
           <Route path="/teams" exact component={TeamList} />;
           <Route path="/locations/:id" component={Location} />;

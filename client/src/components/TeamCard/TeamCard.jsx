@@ -1,5 +1,5 @@
 import React from 'react';
-import '../TeamCard/TeamCard.scss';
+import './TeamCard.scss';
 
 const TeamCard = (props) => {
     return (
