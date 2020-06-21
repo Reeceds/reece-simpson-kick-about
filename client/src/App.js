@@ -8,6 +8,7 @@ import Location from './pages/Location/Location'
 import Team from './pages/Team/Team'
 import TeamList from './pages/TeamList/TeamList';
 import Signup from './pages/Signup/Signup';
+import PlayerProfile from './pages/PlayerProfile/PlayerProfile.jsx'
 import './partials/_global.scss'
 
 
@@ -19,10 +20,12 @@ function App() {
 
         <Switch>
           <Route path="/signup" exact component={Signup} />;
+          <Route path="/" exact component={LocationList} />;
           <Route path="/locations" exact component={LocationList} />;
-          <Route path="/teams" exact component={TeamList} />;
           <Route path="/locations/:id" component={Location} />;
+          <Route path="/teams" exact component={TeamList} />;
           <Route path="/teams/:id" component={Team} />;
+          <Route path="/PlayerProfile" exact component={PlayerProfile} />;
         </Switch>
         <Footer />
 
