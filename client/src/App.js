@@ -19,8 +19,8 @@ function App() {
       <Header />
 
         <Switch>
-          <Route path="/signup" exact component={Signup} />;
-          <Route path="/" exact component={LocationList} />;
+          {/* <Route path="/signup" exact component={Signup} />; */}
+          <Route path="/" exact component={Signup} />;
           <Route path="/locations" exact component={LocationList} />;
           <Route path="/locations/:id" component={Location} />;
           <Route path="/teams" exact component={TeamList} />;

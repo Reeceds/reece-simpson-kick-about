@@ -1,38 +1,63 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './PlayerProfile.scss'
 
 const URL = "http://localhost:8080/playerProfile"
 
-const PlayerProfile = () => {
+class PlayerProfile extends React.Component {
 
-    const playerUpdate = (e) => {
+    state = {
+        playerDetails: []
+    }
+
+    componentDidMount(){
+        axios.get(URL)
+        .then(res => {
+            const details = res.data.find(person => person.id)
+            console.log(details)
+            this.setState({
+                playerDetails: details
+            })
+        })
+    }
+
+    handleChange = () => {
+        const details = this.state.playerDetails
+        this.setState({ playerDetails: !details});
+    }
+
+    playerUpdate = (e) => {
         e.preventDefault();
-        let player = {
+        let updatedPlayer = {
             firstName: e.target.firstName.value,
             lastName: e.target.lastName.value,
             email: e.target.email.value
         }
-        if(player){
-            axios.post(URL + "/", {...player});
-            e.target.reset();
-        } else {
-            alert("Please complete all fields.")
+        if(updatedPlayer){
+            axios.put(URL, {updatedPlayer})
+            .then(res => {
+                alert("Details updated")
+            })
         }
     }
 
-    return(
-        <div className="site-container">
-            <form className="player-profile-form-container" onSubmit={playerUpdate}>
-                <h1 className="player-profile-form-header">Update your details</h1>
-                <input className="player-profile-form-input" type="text" placeholder="First name" name="firstName" required/>
-                <input className="player-profile-form-input" type="text" placeholder="Last name" name="lastName" required/>
-                <input className="player-profile-form-input" type="email" placeholder="Email address" name="email" required/>
-                <button className="player-profile-form-button" type="submit">Update</button>
-            </form>
-        </div>
-    )
+    
+
+
+    render(){
+        return(
+            <div className="site-container">
+                <form className="player-profile-form-container" onSubmit={this.playerUpdate}>
+                    <h1 className="player-profile-form-header">Update your details</h1>
+                    <input className="player-profile-form-input" type="text" placeholder="First name" name="firstName" value={this.state.playerDetails.firstName} onChange={this.handleChange} required/>
+                    <input className="player-profile-form-input" type="text" placeholder="Last name" name="lastName" value={this.state.playerDetails.lastName} onChange={this.handleChange} required/>
+                    <input className="player-profile-form-input" type="email" placeholder="Email address" name="email" value={this.state.playerDetails.email} onChange={this.handleChange} required/>
+                    <button className="player-profile-form-button" type="submit">Update</button>
+                </form>
+            </div>
+        )
+    }
+    
 }
 
 export default PlayerProfile

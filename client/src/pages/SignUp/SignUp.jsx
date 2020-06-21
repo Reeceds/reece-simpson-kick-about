@@ -1,9 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import axios from 'axios';
 import './Signup.scss'
 
-const URL = "http://localhost:8080/player"
+const URL = "http://localhost:8080/playerProfile"
 
 const Signup = () => {
 

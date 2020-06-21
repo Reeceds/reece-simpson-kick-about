@@ -12,7 +12,7 @@ app.use(express.static('assets'))
 
 app.use("/locations", locations);
 app.use("/teams", teams);
-app.use("/player", player);
+app.use("/playerProfile", player);
 
 
 

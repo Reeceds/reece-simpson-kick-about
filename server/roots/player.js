@@ -32,4 +32,18 @@ router.post("/", (req, res) => {
     }
 })
 
+router.put("/", (req, res) => {
+    const newInfo = req.body.updatedPlayer;
+    console.log(newInfo)
+    const playerInfo = player[0];
+    if (newInfo.firstName && newInfo.lastName && newInfo.email){
+        playerInfo.firstName = newInfo.firstName
+        playerInfo.lastName = newInfo.lastName
+        playerInfo.email = newInfo.email
+        res.status(200).json(player)
+    } else {
+        res.status(400).json("Player profile was not updated");
+    }
+})
+
 module.exports = router;

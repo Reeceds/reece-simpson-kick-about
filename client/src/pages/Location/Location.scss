@@ -34,9 +34,15 @@
         margin-bottom: 0.75rem;
     }
 
+    &-address {
+        @include header-4;
+        margin-bottom: 0;
+        margin-bottom: 0.75rem;
+    }
+
+
     &-distance {
-        @include header-3;
-        width: 50%;
+        @include header-4;
         margin-bottom: 0;
     }
 

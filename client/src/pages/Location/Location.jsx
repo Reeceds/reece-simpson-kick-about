@@ -24,9 +24,6 @@ class Location extends React.Component {
     }
 
     render() {
-
-        // const teams = this.state.teams;
-
         return ( 
             <div className="site-container--vertical-padding">
                 <div className="location-page-container">
@@ -34,17 +31,13 @@ class Location extends React.Component {
                     <div className="location-details-container">
                         <h2 className="location-name">{this.state.location.venue}</h2>
                         <p className="location-description">{this.state.location.description}</p>
+                        <p className="location-address">Address: {this.state.location.address}</p>
                         <p className="location-distance">Distance: {this.state.location.distance} km</p>
                     </div>
                     <div className="location-team-card-container">
 
                     {this.state.teams.map(team => {
                         return (<Link key={team.id} to={`/teams/${team.id}`}><TeamCard team={team}/></Link>)})}
-
-                    {/* {teams ? this.state.teams.map(team => {
-                        console.log(team)
-                        return (<Link key={team.id} to={`/teams/${team.id}`}><TeamCard team={team}/></Link>)
-                    }) : null} */}
                     </div>
                 </div>
             </div>

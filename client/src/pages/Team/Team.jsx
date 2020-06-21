@@ -13,18 +13,16 @@ class Team extends React.Component {
 
     state = {
         team: [],
-        venue: [],
         location: []
     }
 
     componentDidMount(){
         axios.get(URL + "/" + this.props.match.params.id)
         .then(res => {
-            console.log(res.data)
+            const location = res.data.location.find(place => place.id)
             this.setState({
                 team: res.data.team,
-                venue: res.data.location[0].venue,
-                location: res.data.location[0].id
+                location: location
             })
         })
     }
@@ -42,12 +40,12 @@ class Team extends React.Component {
                         </div>
                     </div>
                     <div className="team-details-time-players-container">
-                        <Link to={`/locations/${this.state.location}`}>
+                        <Link to={`/locations/${this.state.location.id}`}>
                             <div className="team-details-icon-container">
                                 <div className="team-details-icon--center">
                                     <img alt="location icon" src={locationIcon}/>
                                 </div>
-                                <h4 className="team-details-location">{this.state.venue}</h4>
+                                <h4 className="team-details-location">{this.state.location.venue}</h4>
                             </div>
                         </ Link>
 
