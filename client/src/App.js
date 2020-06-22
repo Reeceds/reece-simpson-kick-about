@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 
 import Header from './components/Header/Header'
-import Footer from './components/Footer/Footer'
+// import Footer from './components/Footer/Footer'
 import LocationList from './pages/LocationList/LocationList'
 import Location from './pages/Location/Location'
 import Team from './pages/Team/Team'
@@ -19,7 +19,6 @@ function App() {
       <Header />
 
         <Switch>
-          {/* <Route path="/signup" exact component={Signup} />; */}
           <Route path="/" exact component={Signup} />;
           <Route path="/locations" exact component={LocationList} />;
           <Route path="/locations/:id" component={Location} />;
@@ -27,7 +26,7 @@ function App() {
           <Route path="/teams/:id" component={Team} />;
           <Route path="/PlayerProfile" exact component={PlayerProfile} />;
         </Switch>
-        <Footer />
+        {/* <Footer /> */}
 
       </BrowserRouter>
 

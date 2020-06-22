@@ -6,6 +6,8 @@ import userIcon from '../../assets/icons/user-icon.svg';
 import clockIcon from '../../assets/icons/time-icon.svg';
 import footballIcon from '../../assets/icons/football-icon.svg';
 import locationIcon from '../../assets/icons/location-icon.svg';
+import Footer from '../../components/Footer/Footer'
+
 
 const URL = "http://localhost:8080/teams"
 
@@ -13,7 +15,9 @@ class Team extends React.Component {
 
     state = {
         team: [],
-        location: []
+        location: [],
+        pendingRequest: false,
+        showBtn: true
     }
 
     componentDidMount(){
@@ -22,13 +26,24 @@ class Team extends React.Component {
             const location = res.data.location.find(place => place.id)
             this.setState({
                 team: res.data.team,
-                location: location
+                location: location,
             })
         })
     }
 
+    handleClick() {
+        const pendingRequest = this.state.pendingRequest
+        const showBtn = this.state.showBtn
+        this.setState({
+            pendingRequest: !pendingRequest,
+            showBtn: !showBtn
+        })
+        console.log("this is working")
+    }
+
     render(){
         return (
+            <>
             <div className="site-container">
                 <h1 className="team-details-comment">" {this.state.team.message} "</h1>
                 <div className="team-details-container">
@@ -57,50 +72,18 @@ class Team extends React.Component {
                             <img className="team-details-icon" alt="Football icon" src={footballIcon}/>
                             <h4 className="team-details-players-needed">Players needed: {this.state.team.playersNeeded}</h4>
                         </div>
-                        <form action="#">
-                            <button className="btn" type="submit">Request Join</button>
-                        </form>
+                        <button className={`btn ${this.state.showBtn ? "show" : "hide"}`} onClick={()=>{this.handleClick()}}>Request Join</button>
                     </div>
                 </div>
+                <div className={`request-container ${this.state.pendingRequest ? "show" : "hide"}`}>
+                    <div className="request-color"></div>
+                    <h3 className="request-text">Your request is pending</h3>
+                </div>
             </div>
+            <Footer />
+            </>
         )
     }
 }
-
-// const Team = (props) => {
-
-//     if(props.team){
-//         return (
-//             <div className="site-container">
-//                 <h1 className="team-details-comment">{props.team.message}</h1>
-//                 <div className="team-details-container">
-//                     <div className="team-details-username-container">
-//                         <h2 className="team-details-team-name">{props.team.teamName}</h2>
-//                         <div className="team-details-icon-container-username">
-//                             <img className="team-details-icon" alt="User icon" src={userIcon}/>
-//                             <h3 className="team-details-username">{props.team.username}</h3>
-//                         </div>
-//                     </div>
-//                     <div className="team-details-time-players-container">
-//                         <div className="team-details-icon-container">
-//                             <img className="team-details-icon" alt="Clock icon" src={clockIcon}/>
-//                             <h4 className="team-details-time">{props.team.time}</h4>
-//                         </div>
-//                         <div className="team-details-icon-container">
-//                             <img className="team-details-icon" alt="Football icon" src={footballIcon}/>
-//                             <h4 className="team-details-players-needed">Players needed: {props.team.playersNeeded}</h4>
-//                         </div>
-//                         <form action="#">
-//                             <button className="btn" type="submit"><h3 className="btn-text">Request Join</h3></button>
-//                         </form>
-//                     </div>
-//                 </div>
-//             </div>
-//         )
-//     } else {
-//         return null
-//     }
-    
-// }
 
 export default Team;

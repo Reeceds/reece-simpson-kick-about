@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import axios from 'axios';
 import TeamCard from '../../components/TeamCard/TeamCard';
 import './Location.scss'
+import Footer from '../../components/Footer/Footer'
 
 const URL = "http://localhost:8080/locations";
 
@@ -25,6 +26,7 @@ class Location extends React.Component {
 
     render() {
         return ( 
+            <>
             <div className="site-container--vertical-padding">
                 <div className="location-page-container">
                     <div className="location-image-container"><img className="location-image" alt="location" src={this.state.location.image}/></div>
@@ -35,12 +37,15 @@ class Location extends React.Component {
                         <p className="location-distance">Distance: {this.state.location.distance} km</p>
                     </div>
                     <div className="location-team-card-container">
+                        <h3 className="location-teams-header">Teams playing at this location</h3>
 
-                    {this.state.teams.map(team => {
+                        {this.state.teams.map(team => {
                         return (<Link key={team.id} to={`/teams/${team.id}`}><TeamCard team={team}/></Link>)})}
                     </div>
                 </div>
             </div>
+            <Footer />
+            </>
          );
     }
     

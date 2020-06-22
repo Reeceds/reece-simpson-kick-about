@@ -3,12 +3,12 @@ const { v4: uuidv4 } = require('uuid');
 const router = express.Router();
 const player = require('../data/player');
 
-// Gets the plauyer details list
+// Gets the player details list
 router.get("/", (req, res) => {
     res.status(200).json(player);
 })
 
-// Gets a players abseed on id
+// Gets a player based on id
 router.get("/:id", (req, res) => {
     const playerId = player.find(user => user.id === req.params.id);
     res.status(200).json(playerId)
@@ -32,6 +32,7 @@ router.post("/", (req, res) => {
     }
 })
 
+// Edits and updates a players details
 router.put("/", (req, res) => {
     const newInfo = req.body.updatedPlayer;
     console.log(newInfo)

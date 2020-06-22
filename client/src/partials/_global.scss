@@ -28,3 +28,31 @@ body{
     }
 }
 
+.slider {
+
+    &-container {
+        margin-bottom: 2rem;
+    }
+    
+    &-distance-container {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 1rem;
+    }
+
+    &-distance {
+        @include header-4;
+        margin: 0;
+    }
+
+    &-mechanism-container {
+        padding: 0 0.5rem;
+    }
+
+    &-btn {
+        padding: 0.5rem 2rem;
+        margin-top: 1.5rem;
+        background-color: $primary-col;
+        border-radius: 0.25rem;
+    }
+}
