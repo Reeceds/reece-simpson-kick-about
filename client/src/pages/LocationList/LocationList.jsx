@@ -64,7 +64,7 @@ class LocationList extends React.Component {
                             onChange={this.onSliderChange}
                         />
                     </div>
-                    <button className="slider-btn" type="button" onClick={()=>{this.setDistance()}}>Set distance</button>
+                    <button className="slider-btn btn" type="button" onClick={()=>{this.setDistance()}}>Set distance</button>
                 </div>
                 
                 {this.state.locations.map(location => {

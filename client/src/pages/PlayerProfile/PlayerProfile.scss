@@ -24,14 +24,18 @@
             margin-bottom: 1rem;
             border-radius: 0.25rem;
             color: $alternate-col;
+
+            &:focus {
+                outline: 0;
+            }
         }
 
-        &-button {
-            @include header-3;
+        &-btn {
             background-color: $primary-col;
-            padding: 1rem;
-            width: 40%;
-            border-radius: 0.25rem;
+
+            &:focus {
+                outline: 0;
+            }
         }
     }
 

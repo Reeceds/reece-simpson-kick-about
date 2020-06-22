@@ -72,7 +72,7 @@ class Team extends React.Component {
                             <img className="team-details-icon" alt="Football icon" src={footballIcon}/>
                             <h4 className="team-details-players-needed">Players needed: {this.state.team.playersNeeded}</h4>
                         </div>
-                        <button className={`btn ${this.state.showBtn ? "show" : "hide"}`} onClick={()=>{this.handleClick()}}>Request Join</button>
+                        <button className={`team-details-btn btn ${this.state.showBtn ? "show" : "hide"}`} onClick={()=>{this.handleClick()}}>Request Join</button>
                     </div>
                 </div>
                 <div className={`request-container ${this.state.pendingRequest ? "show" : "hide"}`}>

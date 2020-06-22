@@ -50,9 +50,18 @@ body{
     }
 
     &-btn {
-        padding: 0.5rem 2rem;
         margin-top: 1.5rem;
         background-color: $primary-col;
-        border-radius: 0.25rem;
+
+        &:focus {
+            outline: 0;
+        }
     }
+}
+
+.btn {
+    @include header-4;
+    border-radius: 1.5rem;
+    padding: 0.75rem 3rem;
+    color: $grey;
 }

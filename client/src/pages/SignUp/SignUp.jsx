@@ -28,7 +28,7 @@ const Signup = () => {
                 <input className="signup-form-input" type="text" placeholder="First name" name="firstName" required/>
                 <input className="signup-form-input" type="text" placeholder="Last name" name="lastName" required/>
                 <input className="signup-form-input" type="email" placeholder="Email address" name="email" required/>
-                <button className="signup-form-button" type="submit">Submit</button>
+                <button className="signup-form-btn btn" type="submit">Submit</button>
             </form>
         </div>
     )

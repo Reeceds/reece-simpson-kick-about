@@ -54,7 +54,7 @@ class PlayerProfile extends React.Component {
                     <input className="player-profile-form-input" type="text" placeholder="First name" name="firstName" value={this.state.playerDetails.firstName} onChange={this.handleChange} required/>
                     <input className="player-profile-form-input" type="text" placeholder="Last name" name="lastName" value={this.state.playerDetails.lastName} onChange={this.handleChange} required/>
                     <input className="player-profile-form-input" type="email" placeholder="Email address" name="email" value={this.state.playerDetails.email} onChange={this.handleChange} required/>
-                    <button className="player-profile-form-button" type="submit">Update</button>
+                    <button className="player-profile-form-btn btn" type="submit">Update</button>
                 </form>
             </div>
             <Footer />

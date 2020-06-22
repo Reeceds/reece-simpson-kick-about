@@ -22,6 +22,7 @@
 
     &-team-name {
         @include header-2;
+        color: $primary-col;
     }
 
     &-username {
