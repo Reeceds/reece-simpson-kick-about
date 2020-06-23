@@ -11,11 +11,13 @@
     &-container {
         width: 100%;
         margin-bottom: 1.5rem;
+        border-radius: 1.5rem;
+        overflow: hidden;
     }
 
     &-username-container {
         background-color: $secondary-col;
-        padding: 1rem 1rem;
+        padding: 1.25rem 1.5rem 1.5rem 1.5rem;
     }
 
     &-icon-container-username {
@@ -57,7 +59,7 @@
 
     &-time-players-container {
         background-color: $primary-col;
-        padding: 1.5rem 1rem;
+        padding: 1.5rem 1.5rem 0.75rem 1.5rem;
     }
 
     &-location {
@@ -80,6 +82,7 @@
         background-color: $secondary-col;
         margin: 0;
         color: $grey;
+        margin-bottom: 0.75rem;
     
         &:focus {
             outline: 0;
@@ -87,21 +90,19 @@
     }
 }
 
-
-
 .request {
 
     &-container {
+        padding: 1rem 1.25rem 1.25rem 1.25rem;;
         background-color: $secondary-col;
-    }
-
-    &-color {
-        background-color: $primary-col;
-        width: 0.5rem;
+        width: 100%;
+        margin-bottom: 1rem;
+        border-radius: 1.25rem;
+        justify-content: center;
     }
 
     &-text {
-        padding: 1.5rem 1rem;
+        padding: 1rem;
         @include header-3;
         margin-bottom: 0;
     }

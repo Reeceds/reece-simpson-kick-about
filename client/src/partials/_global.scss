@@ -11,7 +11,7 @@
     box-sizing: border-box;
     text-decoration: none;
     list-style-type: none;
-    color: $primary-font-col;
+    color: $white;
 }
 
 body{
@@ -64,4 +64,9 @@ body{
     border-radius: 1.5rem;
     padding: 0.75rem 3rem;
     color: $grey;
+    min-width: 10.875rem;
+
+    &:focus {
+        color: unset;
+    }
 }

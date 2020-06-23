@@ -2,31 +2,23 @@
 @import '../../partials/variables';
 
 .team-list-card {
-    &-container {
-        display: flex;
-        margin-bottom: 1rem;
-        // box-shadow: 1px 1px 5px 0px #3333339e;
-
-    }
-
-    &-color {
-        background-color: $primary-col;
-        width: 0.5rem;
-    }
 
     &-details-container {
-        padding: 1rem;
-        background-color: $secondary-col;
+        padding: 1rem 1.25rem 1.25rem 1.25rem;;
+        // background-color: $secondary-col;
+        background-image: linear-gradient(to bottom right, #38776a, #2e5a96);  
         width: 100%;
+        margin-bottom: 1rem;
+        border-radius: 1.25rem;
     }
 
     &-team-list-name {
         @include header-2;
-        color: $primary-col;
+        // color: $primary-col;
     }
 
     &-distance {
-        @include text;
+        @include header-4;
         margin-bottom: 0.5rem;
     }
 
@@ -36,13 +28,16 @@
     }
 
     &-players-needed {
-        @include text;
+        @include header-4;
         width: 50%;
+        margin-bottom: 0;
     }
 
     &-time {
-        @include text;
+        @include header-4;
         width: 50%;
+        margin-bottom: 0;
+
     }
 
     &-players-time-container {

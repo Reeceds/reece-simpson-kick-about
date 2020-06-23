@@ -76,7 +76,6 @@ class Team extends React.Component {
                     </div>
                 </div>
                 <div className={`request-container ${this.state.pendingRequest ? "show" : "hide"}`}>
-                    <div className="request-color"></div>
                     <h3 className="request-text">Your request is pending</h3>
                 </div>
             </div>
