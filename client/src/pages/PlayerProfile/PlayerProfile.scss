@@ -47,31 +47,52 @@
     right: auto;
     bottom: auto;
     margin-right: -50%;
-    transform: translate(-50%, -100%);
-    background-color: $secondary-col;
+    transform: translate(-50%, -90%);
+    background-color: #2f333a;
     margin-top: 3rem;
-    height: 8rem;
+    height: 12rem;
     width: 16rem;
-    border-radius: 0.5rem;
+    border-radius: 0.125rem;
     outline: 0;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 1px 1px 5px 0px #3333339e;
+    /* padding: 1rem 1rem 0 1rem; */
+    flex-direction: column;
+    justify-content: flex-end;
+
 
 
     &-text {
         @include header-2;
-        margin-bottom: 0;
+        margin-bottom: 2rem;
+        padding: 0 1rem;
+        text-align: center;
+    }
+
+    &-overlay {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background-color: #0000008f;
+      }
+
+    &-btn {
+    background-color: $primary-col;
+    width: 100%;
+    @include header-4;
+    padding: 0.75rem 3rem;
+    color: $grey;
+    min-width: 10.875rem;
+
+    &:focus {
+        color: unset;
+    }
     }
     
   }
 
-  .overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: #0000008f;
-  }
+  

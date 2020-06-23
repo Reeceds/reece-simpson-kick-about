@@ -40,12 +40,8 @@ class PlayerProfile extends React.Component {
         }
         if(updatedPlayer){
             axios.put(URL, {updatedPlayer})
-            // .then(res => {
-            //     alert("Details updated")
-            // })
         }
     }
-
     
     handleOpenModal () {
         const showModal = this.state.showModal;
@@ -56,7 +52,6 @@ class PlayerProfile extends React.Component {
         const showModal = this.state.showModal;
         this.setState({ showModal: !showModal });
     }
-
 
     render(){
         return(
@@ -74,17 +69,14 @@ class PlayerProfile extends React.Component {
                     isOpen={this.state.showModal}
                     contentLabel="Minimal Modal Example"
                     className="modal"
-                    overlayClassName="overlay"
+                    overlayClassName="modal-overlay"
                     onRequestClose={()=>{this.handleCloseModal()}}
                     shouldCloseOnOverlayClick={true}
-
-                    
                 >
-                <h2 className="modal-text">Details updated</h2>
-
+                <h2 className="modal-text">Your details have successfully been updated</h2>
+                <button className="modal-btn" onClick={()=>{this.handleCloseModal()}}>close</button>
                 </ReactModal>
                 </div>
-
             </div>
             <Footer />
             </>
