@@ -1,15 +1,19 @@
 import React from 'react';
 import axios from 'axios';
+import ReactModal from 'react-modal';
 import './PlayerProfile.scss'
 import Footer from '../../components/Footer/Footer'
 
+
+ReactModal.setAppElement('body');
 
 const URL = "http://localhost:8080/playerProfile"
 
 class PlayerProfile extends React.Component {
 
     state = {
-        playerDetails: []
+        playerDetails: [],
+        showModal: false
     }
 
     componentDidMount(){
@@ -36,13 +40,22 @@ class PlayerProfile extends React.Component {
         }
         if(updatedPlayer){
             axios.put(URL, {updatedPlayer})
-            .then(res => {
-                alert("Details updated")
-            })
+            // .then(res => {
+            //     alert("Details updated")
+            // })
         }
     }
 
     
+    handleOpenModal () {
+        const showModal = this.state.showModal;
+        this.setState({ showModal: !showModal });
+    }
+    
+    handleCloseModal () {
+        const showModal = this.state.showModal;
+        this.setState({ showModal: !showModal });
+    }
 
 
     render(){
@@ -54,8 +67,24 @@ class PlayerProfile extends React.Component {
                     <input className="player-profile-form-input" type="text" placeholder="First name" name="firstName" value={this.state.playerDetails.firstName} onChange={this.handleChange} required/>
                     <input className="player-profile-form-input" type="text" placeholder="Last name" name="lastName" value={this.state.playerDetails.lastName} onChange={this.handleChange} required/>
                     <input className="player-profile-form-input" type="email" placeholder="Email address" name="email" value={this.state.playerDetails.email} onChange={this.handleChange} required/>
-                    <button className="player-profile-form-btn btn" type="submit">Update</button>
+                    <button onClick={()=>{this.handleOpenModal()}} className="player-profile-form-btn btn" type="submit">Update</button>
                 </form>
+                <div>
+                <ReactModal 
+                    isOpen={this.state.showModal}
+                    contentLabel="Minimal Modal Example"
+                    className="modal"
+                    overlayClassName="overlay"
+                    onRequestClose={()=>{this.handleCloseModal()}}
+                    shouldCloseOnOverlayClick={true}
+
+                    
+                >
+                <h2 className="modal-text">Details updated</h2>
+
+                </ReactModal>
+                </div>
+
             </div>
             <Footer />
             </>
