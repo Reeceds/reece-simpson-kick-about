@@ -1,7 +1,7 @@
 import React from 'react';
 import 'rc-slider/assets/index.css';
 import { Link } from 'react-router-dom';
-import Slider, { createSliderWithTooltip } from 'rc-slider';
+import Slider from 'rc-slider';
 import axios from 'axios';
 import LocationListCard from '../../components/LocationListCard/LocationListCard';
 import '../LocationList/LocationList.scss';

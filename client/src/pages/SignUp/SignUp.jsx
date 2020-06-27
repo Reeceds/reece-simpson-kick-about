@@ -11,6 +11,7 @@ const Signup = () => {
         let player = {
             firstName: e.target.firstName.value,
             lastName: e.target.lastName.value,
+            username: e.target.username.value,
             email: e.target.email.value
         }
         if(player){
@@ -28,6 +29,7 @@ const Signup = () => {
                 <h1 className="signup-form-header">Enter your details</h1>
                 <input className="signup-form-input" type="text" placeholder="First name" name="firstName" required/>
                 <input className="signup-form-input" type="text" placeholder="Last name" name="lastName" required/>
+                <input className="signup-form-input" type="text" placeholder="Username" name="username" required/>
                 <input className="signup-form-input" type="email" placeholder="Email address" name="email" required/>
                 <button className="signup-form-btn btn" type="submit">Submit</button>
             </form>

@@ -36,6 +36,7 @@ class PlayerProfile extends React.Component {
         let updatedPlayer = {
             firstName: e.target.firstName.value,
             lastName: e.target.lastName.value,
+            username: e.target.username.value,
             email: e.target.email.value
         }
         if(updatedPlayer){
@@ -61,6 +62,7 @@ class PlayerProfile extends React.Component {
                     <h1 className="player-profile-form-header">Update your details</h1>
                     <input className="player-profile-form-input" type="text" placeholder="First name" name="firstName" value={this.state.playerDetails.firstName} onChange={this.handleChange} required/>
                     <input className="player-profile-form-input" type="text" placeholder="Last name" name="lastName" value={this.state.playerDetails.lastName} onChange={this.handleChange} required/>
+                    <input className="player-profile-form-input" type="text" placeholder="Username" name="username" value={this.state.playerDetails.username} onChange={this.handleChange} required/>
                     <input className="player-profile-form-input" type="email" placeholder="Email address" name="email" value={this.state.playerDetails.email} onChange={this.handleChange} required/>
                     <button onClick={()=>{this.handleOpenModal()}} className="player-profile-form-btn btn" type="submit">Update</button>
                 </form>

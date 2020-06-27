@@ -22,14 +22,14 @@
     }
 
     &-details-container {
-        // background-color: $secondary-col;
+        background-color: $blue;
         padding: 1.25rem 1.5rem 1rem 1.5rem;
-        background-image: linear-gradient(to bottom right, #38776a, #2e5a96);  
+        // background-image: linear-gradient(to bottom right, #38776a, #2e5a96);  
     }
 
     &-venue {
         @include header-2;
-        margin-bottom: 1rem;
+        margin-bottom: 0.75rem;
     }
 
     &-distance {

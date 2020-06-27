@@ -6,7 +6,7 @@ const teamsList =
         id: uuidv4(),
         teamName: "Giroud awakening",
         username: "Ben Roberts",
-        message: "Need two palyers for a friendly game :)",
+        message: "Need two more palyers for a quick game :)",
         playersNeeded: 2,
         time: "20:00",
         locNum: 1
@@ -33,7 +33,7 @@ const teamsList =
         id: uuidv4(),
         teamName: "Emery Little Helps",
         username: "Matt Agnew",
-        message: "Desperately in ened of a goalkeeper!",
+        message: "Desperately in need of a goalkeeper!",
         playersNeeded: 1,
         time: "19:00",
         locNum: 3
@@ -77,7 +77,7 @@ const teamsList =
     {
         id: uuidv4(),
         teamName: "Cech yourself, before you wreck yourself",
-        message: "Had a player drop out, need a replacement",
+        message: "Need one more player to make the teams even",
         username: "Ryan Wood",
         playersNeeded: 1,
         time: "19:45",

@@ -17,11 +17,12 @@ router.get("/:id", (req, res) => {
 // Posts a new player to the player list
 router.post("/", (req, res) => {
     const playerInfo = req.body;
-    if (playerInfo.firstName && playerInfo.lastName && playerInfo.email){
+    if (playerInfo.firstName && playerInfo.lastName && playerInfo.username && playerInfo.email){
         const newPlayer = {
             id: uuidv4(),
             firstName: playerInfo.firstName,
             lastName: playerInfo.lastName,
+            username: playerInfo.username,
             email: playerInfo.email
         }
 
@@ -35,12 +36,13 @@ router.post("/", (req, res) => {
 // Edits and updates a players details
 router.put("/", (req, res) => {
     const newInfo = req.body.updatedPlayer;
-    console.log(newInfo)
     const playerInfo = player[0];
-    if (newInfo.firstName && newInfo.lastName && newInfo.email){
+    if (newInfo.firstName && newInfo.lastName && newInfo.username && newInfo.email){
         playerInfo.firstName = newInfo.firstName
         playerInfo.lastName = newInfo.lastName
+        playerInfo.username = newInfo.username
         playerInfo.email = newInfo.email
+
         res.status(200).json(player)
     } else {
         res.status(400).json("Player profile was not updated");
